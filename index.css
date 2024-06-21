@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  font: normal 900 20px Arial;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+#n1, #n2, #operation, #calculate, #output {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 60px;
+}
+#calculate:hover {
+  cursor: pointer;
+}
