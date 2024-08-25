@@ -6,8 +6,8 @@ const output = document.getElementById('output');
 
 Math.Factorial = function(x) {
         if (typeof(x) !== 'number') x = Number(x);
-        if (isNaN(x)) throw 'Ошибка! Причина: Факториал может быть взят только из чисел';
-        if (x < 0) throw 'Ошибка! Причина: Факториал может быть взят только из положительного числа';
+        if (isNaN(x)) throw '';
+        if (x < 0) throw '';
         if (x === 0 || x === 1) return 1;
         return x * Math.Factorial(x - 1);
 };
