@@ -7,20 +7,22 @@
                 <link rel="stylesheet" href="./index.css">
         </head>
         <body>
-                <input type="text" id="output" readonly>
-                <input type="number" id="n1" placeholder="Введите число...">
-                <select id="operation">
-                        <option value="+">Сложение</option>
-                        <option value="-">Вычитание</option>
-                        <option value="*">Умножение</option>
-                        <option value="/">Деление</option>
-                        <option value="^">Возведение в степень</option>
-                        <option value="!">Факториал</option>
-                        <option value="|">Модуль</option>
-                        <option value="√">Квадратный корень</option>
-                </select>
-                <input type="number" id="n2" placeholder="Введите число...">
-                <button id="calculate">Посчитать</button>
-                <script src="./index.js"></script>
+                <div id="container">
+                        <input type="text" id="output" placeholder="Тут будет ответ..." readonly>
+                        <input type="number" id="n1" placeholder="Введите число...">
+                        <select id="operation">
+                                <option value="+">Сложение</option>
+                                <option value="-">Вычитание</option>
+                                <option value="*">Умножение</option>
+                                <option value="/">Деление</option>
+                                <option value="^">Возведение в степень</option>
+                                <option value="!">Факториал</option>
+                                <option value="|">Модуль</option>
+                                <option value="√">Квадратный корень</option>
+                        </select>
+                        <input type="number" id="n2" placeholder="Введите число...">
+                        <button id="calculate">Посчитать</button>
+                        <script src="./index.js"></script>
+                </div>
         </body>
 </html>
