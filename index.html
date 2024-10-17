@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Mini calculator</title>
+                <link rel="stylesheet" href="./index.css">
+        </head>
+        <body>
+                <div id="container">
+                        <input type="text" id="output" placeholder="Here will be answer..." readonly>
+                        <input type="number" id="number-1" placeholder="Enter a number...">
+                        <select id="operation">
+                                <option value="+">Addition</option>
+                                <option value="-">Substruction</option>
+                                <option value="*">Multiplication</option>
+                                <option value="/">Division</option>
+                                <option value="^">Exponentiation</option>
+                                <option value="!">Factorial</option>
+                                <option value="|">Absolute value</option>
+                                <option value="√">Square root</option>
+                        </select>
+                        <input type="number" id="number-2" placeholder="Enter a number...">
+                        <button id="calculate">Calculate</button>
+                        <script src="./index.js"></script>
+                </div>
+        </body>
+</html>
