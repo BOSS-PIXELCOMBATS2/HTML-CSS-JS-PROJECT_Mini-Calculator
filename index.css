@@ -1,0 +1,45 @@
+* {
+        box-sizing: border-box;
+        font: normal 900 20px Arial;
+}
+body {
+        margin: 0;
+}
+* {
+        box-sizing: border-box;
+        font: normal 900 20px Arial;
+}
+body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+}
+#container {
+        margin-top: 50px;
+        padding: 10px;
+        background-color: grey;
+        border: 2px solid black;
+        border-radius: 15px;
+}
+#output, #number-1, #number-2, #operation, #calculate {
+        display: block;
+        margin: 10px;
+        padding: 10px;
+        width: 300px;
+        height: 60px;
+}
+#calculate {
+        transition: all .3s;
+        background-color: green;
+        border: 2px solid black;
+}
+#calculate:hover {
+        cursor: pointer;
+        background-color: lime;
+        color: white;
+}
