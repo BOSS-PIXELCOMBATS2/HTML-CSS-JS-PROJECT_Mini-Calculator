@@ -1,11 +1,13 @@
-const output = document.getElementById('output');
-const number1 = document.getElementById('number-1');
-const number2 = document.getElementById('number-2');
-const operation = document.getElementById('operation');
-const calculate = document.getElementById('calculate');
+const output = document.getElementById('output'),
+        number1 = document.getElementById('number-1'),
+        number2 = document.getElementById('number-2'),
+        operation = document.getElementById('operation'),
+        calculate = document.getElementById('calculate');
+
+const maxNumberValue = 999999999999999, minNumberValue = -999999999999999;
 
 Math.factorial = function(x) {
-        if (typeof(x) !== 'number') x = +x;
+        x = +x;
         if (isNaN(x)) throw new TypeError('Parameter: \'x\' must be a number.');
         if (x < 0) throw new TypeError('Parameter: \'x\' must be a positive number.');
         if (x === 0 || x === 1) return 1;
@@ -16,14 +18,14 @@ number1.addEventListener('blur', ()=> {
         const numberValue = +number1.value;
         if (isNaN(numberValue)) number1.value = 0;
         if (operation.value === '!' || operation.value === '√' && numberValue < 0) number1.value = 0;
-        if (numberValue >= 999999999999999) n1.value = 999999999999999;
-        if (numberValue <= -999999999999999) n1.value = -999999999999999;
+        if (numberValue >= maxNumberValue) n1.value = maxNumberValue;
+        if (numberValue <= minNumberValue) n1.value = minNumberValue;
 });
 number2.addEventListener('blur', ()=> {
         const numberValue = +number2.value;
         if (isNaN(nv)) number2.value = 0;
-        if (numberValue >= 999999999999999) number2.value = 999999999999999;
-        if (numberValue <= -999999999999999) number2.value = -999999999999999;
+        if (numberValue >= maxNumberValue) number2.value = maxNumberValue;
+        if (numberValue <= minNumberValue) number2.value = minNumberValue;
 });
 operation.addEventListener('change', ()=> {
         switch (operation.value) {
