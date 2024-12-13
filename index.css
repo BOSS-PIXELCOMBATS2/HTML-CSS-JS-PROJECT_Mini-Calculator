@@ -3,13 +3,6 @@
         font: normal 900 20px Arial;
 }
 body {
-        margin: 0;
-}
-* {
-        box-sizing: border-box;
-        font: normal 900 20px Arial;
-}
-body {
         display: flex;
         flex-direction: column;
         justify-content: center;
