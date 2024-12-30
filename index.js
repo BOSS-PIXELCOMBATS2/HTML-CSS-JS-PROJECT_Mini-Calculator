@@ -1,61 +1,61 @@
-const output = document.getElementById('output'),
-        number1 = document.getElementById('number-1'),
-        number2 = document.getElementById('number-2'),
-        operation = document.getElementById('operation'),
-        calculate = document.getElementById('calculate');
+const Output = document.getElementById('output'),
+        Number1 = document.getElementById('number-1'),
+        Number2 = document.getElementById('number-2'),
+        Operation = document.getElementById('operation'),
+        Oalculate = document.getElementById('calculate');
 
-const maxNumberValue = 999999999999999, minNumberValue = -999999999999999;
+const MaxNumberValue = 999999999999999, MinNumberValue = -999999999999999;
 
-Math.factorial = function(x) {
+Math.Factorial = function(x) {
         x = +x;
-        if (isNaN(x)) throw new TypeError('Parameter: \'x\' must be a number.');
-        if (x < 0) throw new TypeError('Parameter: \'x\' must be a positive number.');
+        if (isNaN(x)) throw new TypeError('Parameter \'x\' must be a number.');
+        if (x < 0) throw new TypeError('Parameter \'x\' must be a positive number.');
         if (x === 0 || x === 1) return 1;
         return x * Math.factorial(x - 1);
 };
 
-number1.addEventListener('blur', ()=> {
-        const numberValue = +number1.value;
-        if (isNaN(numberValue)) number1.value = 0;
-        if (operation.value === '!' || operation.value === '√' && numberValue < 0) number1.value = 0;
-        if (numberValue >= maxNumberValue) n1.value = maxNumberValue;
-        if (numberValue <= minNumberValue) n1.value = minNumberValue;
+Number1.addEventListener('blur', ()=> {
+        const NumberValue = +number1.value;
+        if (isNaN(NumberValue)) number1.value = 0;
+        if (Operation.value === '!' || Operation.value === '√' && NumberValue < 0) Number1.value = 0;
+        if (NumberValue >= MaxNumberValue) Number1.value = MaxNumberValue;
+        if (NumberValue <= MinNumberValue) Number1.value = MinNumberValue;
 });
-number2.addEventListener('blur', ()=> {
-        const numberValue = +number2.value;
-        if (isNaN(nv)) number2.value = 0;
-        if (numberValue >= maxNumberValue) number2.value = maxNumberValue;
-        if (numberValue <= minNumberValue) number2.value = minNumberValue;
+Number2.addEventListener('blur', ()=> {
+        const NumberValue = +Number2.value;
+        if (isNaN(NumberValue)) Number2.value = 0;
+        if (NumberValue >= MaxNumberValue) Number2.value = MaxNumberValue;
+        if (NumberValue <= MinNumberValue) Number2.value = MinNumberValue;
 });
-operation.addEventListener('change', ()=> {
-        switch (operation.value) {
-                case '+': number2.style.display = 'block'; break;
-                case '-': number2.style.display = 'block'; break;
-                case '*': number2.style.display = 'block'; break;
-                case '/': number2.style.display = 'block'; break;
-                case '^': number2.style.display = 'block'; break;
-                case '!': number2.style.display = 'none'; break;
-                case '|': number2.style.display = 'none'; break;
-                case '√': number2.style.display = 'none'; break;
+Operation.addEventListener('change', ()=> {
+        switch (Operation.value) {
+                case '+': Number2.style.display = 'block'; break;
+                case '-': Number2.style.display = 'block'; break;
+                case '*': Number2.style.display = 'block'; break;
+                case '/': Number2.style.display = 'block'; break;
+                case '^': Number2.style.display = 'block'; break;
+                case '!': Number2.style.display = 'none'; break;
+                case '|': Number2.style.display = 'none'; break;
+                case '√': Number2.style.display = 'none'; break;
         }
 });
-calculate.addEventListener('click', ()=> {
-        const value1 = number1.value;
-        const value2 = number2.value;
-        if (value1.trim() === '') number1.value = 0;
-        if (value2.trim() === '') number2.value = 0;
-        const number1value = +number1.value;
-        const number2value = +number2.value;
-        let result;
-        switch (operation.value) {
-                case '+': result = number1value + number2value; break;
-                case '-': result = number1value - number2value; break;
-                case '*': result = number1value * number2value; break;
-                case '/': number2value === 0 ? number1value === 0 ? result = 'Not a number' : number1value < 0 ? result = '-Infinity' : result = 'Infinity' : result = number1value / number2value; break;
-                case '^': result = number1value ** number2value; break;
-                case '!': result = Math.factorial(number1value); break;
-                case '|': result = Math.abs(number1value); break;
-                case '√': number1value < 0 ? result = 'Not a number' : result = Math.sqrt(number1value); break;
+Calculate.addEventListener('click', ()=> {
+        const Value1 = Number1.value;
+        const Value2 = Number2.value;
+        if (Value1.trim() === '') Number1.value = 0;
+        if (Value2.trim() === '') Number2.value = 0;
+        const Number1Value = +Number1.value;
+        const Number2Value = +Number2.value;
+        let Result = 0;
+        switch (Operation.value) {
+                case '+': Result = Number1Value + Number2Value; break;
+                case '-': Result = Number1Value - Number2Value; break;
+                case '*': Result = Number1Value * Number2Value; break;
+                case '/': Number2Value === 0 ? Number1Value === 0 ? Result = 'Not a number' : Number1value < 0 ? Result = '-Infinity' : Result = 'Infinity' : Result = Number1Value / Number2Value; break;
+                case '^': Result = Number1Value ** Number2Value; break;
+                case '!': Result = Math.Factorial(Number1Value); break;
+                case '|': Result = Math.abs(number1value); break;
+                case '√': Number1Value < 0 ? Result = 'Not a number' : Result = Math.sqrt(Number1Value); break;
         }
-        output.value = result;
+        Output.value = Result;
 });
