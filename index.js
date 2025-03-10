@@ -18,6 +18,7 @@ Number1.addEventListener('blur', ()=> {
         const NumberValue = +number1.value;
         if (isNaN(NumberValue)) number1.value = 0;
         if (Operation.value === '!' || Operation.value === '√' && NumberValue < 0) Number1.value = 0;
+        if (Operation.value === '!' && !Number.isInteger(NumberValue)) Number1.value = Math.round(NumberValue);
         if (NumberValue >= MaxNumberValue) Number1.value = MaxNumberValue;
         if (NumberValue <= MinNumberValue) Number1.value = MinNumberValue;
 });
