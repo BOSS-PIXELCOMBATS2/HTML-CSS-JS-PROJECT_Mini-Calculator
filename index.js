@@ -11,7 +11,7 @@ Math.Factorial = function(x) {
         if (isNaN(x)) throw new TypeError('Parameter \'x\' must be a number.');
         if (x < 0) throw new TypeError('Parameter \'x\' must be a positive number.');
         if (x === 0 || x === 1) return 1;
-        return x * Math.factorial(x - 1);
+        return x * Math.Factorial(x - 1);
 };
 
 Number1.addEventListener('blur', ()=> {
