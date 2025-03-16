@@ -10,6 +10,7 @@ Math.Factorial = function(x) {
         x = +x;
         if (isNaN(x)) throw new TypeError('Parameter \'x\' must be a number.');
         if (x < 0) throw new TypeError('Parameter \'x\' must be a positive number.');
+        if (!Number.isInteger(x)) throw new RangeError('Parameter \'x\' must be a positive integer.');
         if (x === 0 || x === 1) return 1;
         return x * Math.Factorial(x - 1);
 };
