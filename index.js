@@ -56,7 +56,7 @@ Calculate.addEventListener('click', ()=> {
                 case '/': Number2Value === 0 ? Number1Value === 0 ? Result = 'Not a number' : Number1value < 0 ? Result = '-Infinity' : Result = 'Infinity' : Result = Number1Value / Number2Value; break;
                 case '^': Result = Number1Value ** Number2Value; break;
                 case '!': Result = Math.Factorial(Number1Value); break;
-                case '|': Result = Math.abs(number1value); break;
+                case '|': Result = Math.abs(Number1Value); break;
                 case '√': Number1Value < 0 ? Result = 'Not a number' : Result = Math.sqrt(Number1Value); break;
         }
         Output.value = Result;
