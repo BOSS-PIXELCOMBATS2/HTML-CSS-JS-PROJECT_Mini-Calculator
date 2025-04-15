@@ -2,7 +2,7 @@ const Output = document.getElementById('output'),
         Number1 = document.getElementById('number-1'),
         Number2 = document.getElementById('number-2'),
         Operation = document.getElementById('operation'),
-        Oalculate = document.getElementById('calculate');
+        Calculate = document.getElementById('calculate');
 
 const MaxNumberValue = 999999999999999, MinNumberValue = -999999999999999;
 
